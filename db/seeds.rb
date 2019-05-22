@@ -21,13 +21,13 @@ ingredients["drinks"].each do |ingredient|
   instance_ingredient.save
 end
 
-url_cocktail = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-cocktails_serialized = open(url_cocktail).read
-cocktails = JSON.parse(cocktails_serialized)
+#url_cocktail = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
+#cocktails_serialized = open(url_cocktail).read
+#cocktails = JSON.parse(cocktails_serialized)
 
-cocktails["drinks"].each do |cocktail|
-  cocktail_name = cocktail['strDrink']
-  instance_cocktail = Cocktail.new(name: cocktail_name)
-  instance_cocktail.save
-end
+#cocktails["drinks"].each do |cocktail|
+#  cocktail_name = cocktail['strDrink']
+# instance_cocktail = Cocktail.new(name: cocktail_name)
+#  instance_cocktail.save
+#end
 
