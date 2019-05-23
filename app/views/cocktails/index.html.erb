@@ -1,7 +1,20 @@
-<div class="container mt-5">
-  <h1>List of cocktails</h1>
-  <% @cocktails.each do |cocktail| %>
-    <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-  <% end %>
-  <%= link_to "Add a cocktail", new_cocktail_path(@cocktail) %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Cocktails</h1>
+    <%= link_to "Add a cocktail", new_cocktail_path(@cocktail) %>
+  </div>
 </div>
+
+<div class="container mt-4">
+  <div class="cards">
+
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+
+    </div>
+  <% end %>
+  </div>
+</div>
+
+
